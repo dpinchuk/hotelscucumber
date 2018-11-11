@@ -12,8 +12,8 @@ Feature: Open Main Page
       | //*[@id="searchForm"]/input |
 
     And Enter address or zipcode into the search field
-      | Field locator               | Data    |
-      | //*[@id="searchForm"]/input | 7654321 |
+      | Field locator               | Data  |
+      | //*[@id="searchForm"]/input | 07432 |
 
     And Click on search magnifying glass
       | Button locator                 |
