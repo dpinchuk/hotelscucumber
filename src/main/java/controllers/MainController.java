@@ -11,6 +11,11 @@ import static configuration.Configuration.*;
 public class MainController {
 
     private static WebDriver driver;
+    private String URL;
+
+    public MainController(String URL) {
+        this.URL = URL;
+    }
 
     public void initTestEnvironment() {
         /*Настройка тестовой среды*/
@@ -27,7 +32,7 @@ public class MainController {
         driver.manage().timeouts().implicitlyWait(TIME_OUT_WAIT, TimeUnit.SECONDS);
 
         /*В коммандную строку браузера ввести URL*/
-        driver.get(URL);
+        driver.get(this.URL);
     }
 
     public WebDriver getDriver() {

@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.hotels;
 
 import controllers.MainController;
 import cucumber.api.DataTable;
@@ -21,16 +21,17 @@ import static configuration.Configuration.DAYS;
 import static configuration.Configuration.TEST_CITY;
 import static org.junit.Assert.assertEquals;
 
-public class OpenPageSD {
+public class HotelsSD {
 
     private MainController mainController;
     private WebElement webElement;
-
-    @Given("^Opened main web page$")
-    public void openMainWebPage() throws Throwable {
-        this.mainController = new MainController();
-        this.mainController.initTestEnvironment();
-    }
+//
+//    @Given("^Opened main web page$")
+//    public void openMainWebPage(DataTable table) throws Throwable {
+//        List<List<String>> data = table.raw();
+//        this.mainController = new MainController(data.get(1).get(0));
+//        this.mainController.initTestEnvironment();
+//    }
 
     @And("^Find search field$")
     public void findSearchField() throws Throwable {
